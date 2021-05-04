@@ -278,7 +278,6 @@ nav {
 
 .services {
   text-align: center;
-  margin-top: -50px;
 }
 
 img {
@@ -337,7 +336,7 @@ img {
 /* About Section */
 .about {
   text-align: center;
-  background-image: url(/images/background-1.jpg);
+  background-image: url(../images/background-1.jpg);
   color: #eee;
   clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
   padding: 150px;
@@ -396,7 +395,7 @@ img {
 /* Portfolio */
 
 .portfolio {
-  background-image: url(/images/background-3.jpg);
+  background-image: url(../images/background-3.jpg);
   color: #eee;
   clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
 }
