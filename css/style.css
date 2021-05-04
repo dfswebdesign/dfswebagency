@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "lato" sans-serif;
+}
+
+/* Global CSS */
+
+section {
+  padding: 150px;
+  background-color: #eee;
+}
+
+.text-align {
+  text-align: center;
+}
+
+/* .margin-top,
+.margin-bottom {
+  padding-top: 50px;
+} */
+
+.margin-med {
+  margin-top: 50px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: 20px;
+  margin: 20px 0 25px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+p {
+  font-size: 18px;
+}
+/*End of  Global CSS */
+
+/* Row */
+
+.row {
+  max-width: 100rem;
+  /* background-color: rgb(255, 255, 255); */
+  margin: 0 auto;
+  /*selectors (ref line 21)
+  
+  ^ - selects the start of a class attribute example below, all the class attributes starts with "col"
+  * - select any class that contain the word "col"
+  $ - any class that ends with "col-"
+  
+  */
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^="col-"] {
+  float: left;
+}
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+/*  End Row */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  right: 0;
+  height: 10vh;
+  background: #1d1d1d9d;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  /* align-items: center; */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 35%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.landing {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing h1 {
+  margin: 100px;
+  font-size: 50px;
+  color: #ae5fce;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #176099;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .landing {
+    flex-direction: column;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+
+.logo {
+  margin-top: 10px;
+  font-size: 45px;
+  margin-left: 25px;
+  color: #eee;
+}
+
+/* End of Navigation */
+
+/* Hero Section */
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2)),
+    url(../images/productivity-1995786_1920.jpg);
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+  z-index: -1;
+  /* background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(/images/productivity-1995786_1920.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-text {
+  color: #eee;
+  font-size: 60px;
+  text-align: center;
+}
+
+.hero-subtext {
+  font-size: 25px;
+  color: #eee;
+  max-width: 75%;
+  margin: 0 auto;
+  font-weight: 100;
+}
+
+/* End of Hero Section */
+
+/* Services */
+
+.services {
+  text-align: center;
+  margin-top: -50px;
+}
+
+img {
+  display: inline-block;
+  margin: 0 auto;
+}
+.service-heading-text {
+  text-align: center;
+}
+
+.service-description {
+  font-size: 35px;
+  color: #176099;
+}
+
+.service-description__para {
+  text-align: left;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 836px) {
+  .service {
+    padding: 0 20px 0;
+    margin-top: 25px;
+  }
+
+  .service-description__para {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+/* End of Media Query */
+
+/* End Of Services */
+
+/* About Section */
+.about {
+  text-align: center;
+  background-image: url(/images/background-1.jpg);
+  color: #eee;
+  clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+  padding: 150px;
+}
+
+.about-title {
+  color: #eee;
+}
+
+.about-text {
+  width: 75%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-text:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fas {
+  margin-right: 15px;
+  font-size: 35px;
+}
+
+.list-item__title {
+  font-size: 30px;
+  width: 75%;
+  text-align: left;
+}
+
+/* End of About Section */
+
+/* Maintenance Plan */
+
+.plan {
+  text-align: center;
+  margin-top: -50px;
+}
+
+.plan-heading-text {
+  text-align: center;
+}
+
+.icon {
+  text-align: center;
+}
+
+/* End of Maintenance Plan */
+
+/* Portfolio */
+
+.portfolio {
+  background-image: url(/images/background-3.jpg);
+  color: #eee;
+  clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+}
+
+.portfolio img {
+  height: 250px;
+  width: 450px;
+
+  transition: all 2s;
+}
+
+.portfolio img:hover {
+  transform: scale(1.1) rotate(10deg);
+  -webkit-box-shadow: 4px 5px 15px 3px rgba(0, 0, 0, 0.42);
+  box-shadow: 4px 5px 15px 3px rgba(0, 0, 0, 0.42);
+}
+
+/*End of Portfolio */
