@@ -21,31 +21,41 @@
     />
 
     <!-- Styles CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
-    <!-- Navigation  -->
 
-    <nav>
-      <div class="logo">
-        <h2>Logo</h2>
+    <nav class="navbar ">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo">Digital Footprint</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        
+        <ul class="navbar__menu ">
+          <li class="navbar__item ">
+            <a href="/#services" class="navbar__links"> Service </a>
+          </li>
+          <li class="navbar__item ">
+            <a href="/#about" class="navbar__links"> About </a>
+          </li>
+          <li class="navbar__item">
+            <a href="/#plan" class="navbar__links"> Plans </a>
+          </li>
+          <li class="navbar__item">
+            <a href="/#portfolio" class="navbar__links"> Portfolio </a>
+          </li>
+          <li class="navbar__item">
+            <a href="/#contact" class="navbar__links"> Contact </a>
+          </li>
+        </ul>
       </div>
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#services">Service</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#plan">Plans</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
     </nav>
-    <!-- End Navigation  -->
-
+   
     <!-- Hero Section -->
 
     <section class="hero" id="hero">
@@ -55,12 +65,12 @@
           Start Working With A Web Design Agency That Can Offers Everything You
           Need To Provide The Online Presence Your Company Needs To GROW.
         </p>
-      </div>
+        
     </section>
 
     <!-- End of Hero Section -->
 
-    <section class="services" id="services">
+    <section class="services" id="services" section1>
       <div class="container">
         <div>
           <h2 class="margin-top">Services</h2>
@@ -82,8 +92,9 @@
               <p class="service-description__para">
                 Websites we build for our clients are modern, attractive and
                 designed responsively. This means your website fits all screen
-                sizes.
+                sizes. 
               </p>
+              <a href="web-design.html">Learn more</a>
             </div>
           </div>
           <div class="column">
@@ -95,6 +106,7 @@
                 websites to to flourish, which in turn, increase revenue for
                 your business.
               </p>
+              <a href="seo.html">Learn more &rarr;</a>
             </div>
           </div>
           <div class="column">
@@ -104,8 +116,9 @@
               <p class="service-description__para">
                 We build websites and applications using the latest technologies
                 that works hard, achieve results, and generate a return on
-                investment.
+                investment. 
               </p>
+              <a href="web-development.html">Learn more &rarr;</a>
             </div>
           </div>
           <div class="column">
@@ -117,10 +130,16 @@
                 customers the chance to see your values and how they reflect in
                 your services or products
               </p>
+              <a href="brands.html">Learn more &rarr;</a>
+
+              
+              
             </div>
           </div>
         </div>
     </div>
+   
+  </div>
       </div>
     </section>
 
@@ -314,22 +333,23 @@
             <div class="columns portfolio-center">
                 <div class="column">
                   <div class="portolio-img">
-                      <img src="images/beauty redefined.png" alt="">
+                       <img src="images/beauty redefined.png" alt="cosmetics">
                   </div>
+                  
                 </div>
                 <div class="column">
                     <div class="portolio-img">
-                        <img src="images/mama mia.png" alt="">
+                        <img src="images/mama mia.png" alt="restuarant">
                     </div>
                 </div>
                 <div class="column">
                     <div class="portolio-img">
-                        <img src="images/jmj construction.png" alt="">
+                        <img src="images/jmj construction.png" alt="construction">
                     </div>
                 </div>
                 <div class="column">
                     <div class="portolio-img">
-                        <img src="images/dfs.png" alt="">
+                        <img src="images/dfs.png" alt="call center">
                     </div>
                 </div>
               </div>
@@ -337,63 +357,86 @@
               <div class="columns portfolio-center">
                 <div class="column">
                   <div class="portolio-img">
-                      <img src="images/fudge shop.png" alt="">
+                      <img src="images/fudge shop.png" alt="icecream shop">
                   </div>
                 </div>
                 <div class="column">
                     <div class="portolio-img">
-                        <img src="images/package manager.png" alt="">
+                        <img src="images/package manager.png" alt="packaging company">
                     </div>
                 </div>
                 <div class="column">
                     <div class="portolio-img">
-                        <img src="images/a&l heating.png" alt="">
+                        <img src="images/a&l heating.png" alt="air condition company">
                     </div>
                 </div>
                 <div class="column">
                     <div class="portolio-img">
-                        <img src="images/perry h law.png" alt="">
+                        <img src="images/perry h law.png" alt="law firm">
                     </div>
                 </div>
               </div>
     </section>
 
+    
+
+    <!-- Contact Form -->
+    <div class="container" id="contact">
+      <div>
+          <h2 class="margin-top text-align">Contact Us</h2>
+        </div>
+
+        <div class="contact-heading-text">
+          <h3>Let's talk about how we can work together!</h3>
+      
+      <div class="wrapper">
+        <div class="company-info">
+          <h3>Digital Footprint Solutions, Inc.</h3>
+          <ul>
+            <li><i class="fa fa-road"></i> 2580 E Sunrise Blvd, Fort Lauderdale Fl. 33304</li>
+            <li><i class="fa fa-phone"></i> (954)361-5215</li>
+            <li><i class="fa fa-envelope"></i> info@digitalfootprintsolutions.com</li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Email Us</h3>
+          <form action="https://formspree.io/f/xnqljglv" method="POST" id="contactform">
+            <p>
+              <label>Name</label>
+              <input type="text" name="name" id="name">
+            </p>
+            <p>
+              <label>Company</label>
+              <input type="text" name="company" id="company">
+            </p>
+            <p>
+              <label>Email Address</label>
+              <input type="email" name="email" id="email">
+            </p>
+            <p>
+              <label>Phone Number</label>
+              <input type="text" name="phone" id="phone">
+            </p>
+            <p class="full">
+              <label>Message</label>
+              <textarea name="message" rows="5" id="message"></textarea>
+            </p>
+            <p class="full">
+              <button type="submit">Submit</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- End of Contact Form -->
+
+       <!-- Jquery Scrolling -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+
+    <!-- JS App script -->
     <script src="js/app.js"></script>
   </body>
 </html>
 
-<!-- <section class="grid-test">
-    <div class="row">
-        <div class="col-1-of-2">col 1 of 2</div>
-        <div class="col-1-of-2">col 1 of 2</div>
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-3">col 1 of 3</div>
-        <div class="col-1-of-3">col 1 of 3</div>
-        <div class="col-1-of-3">col 1 of 3</div>
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-3">col 1 of 3</div>
-        <div class="col-2-of-3">col 2 of 3</div>
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-4">col 1 of 4</div>
-        <div class="col-1-of-4">col 1 of 4</div>
-        <div class="col-1-of-4">col 1 of 4</div>
-        <div class="col-1-of-4">col 1 of 4</div>
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-4">col 1 of 4</div>
-        <div class="col-1-of-4">col 1 of 4</div>
-        <div class="col-2-of-4">col 2 of 4</div>
-    </div>
-
-    <div class="row">
-        <div class="col-1-of-4">col 1 of 4</div>
-        <div class="col-3-of-4">col 3 of 4</div>
-    </div>
-</section> -->
